@@ -14,7 +14,7 @@ st.title('📊 Dashboard de Análise de Vendas')
 
 # Upload do arquivo
 arquivo = st.file_uploader(
-   'faça um upload do arquivo de vendas (.xlsx)',
+   'Faça um upload do arquivo de vendas (.xlsx)',
    type=['xlsx'] 
 )
 
