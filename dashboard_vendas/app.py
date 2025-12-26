@@ -41,7 +41,7 @@ if arquivo:
     # vendas por mês
     vendas_mes = (
         df
-        .groupby(df['data'].dt.to_period('M'))['VALOR']
+        .groupby(df['data'].dt.to_period('M'))['valor']
         .sum()
         .reset_index()
     )
@@ -51,7 +51,7 @@ if arquivo:
     fig_mes = px.bar(
         vendas_mes,
         x='data',
-        y='VALOR',
+        y='valor',
         title='Vendas por Mês'
     )
 
@@ -60,8 +60,8 @@ if arquivo:
     # Vendas por categoria
     fig_categoria = px.pie(
         df,
-        names='CATEGORIA',
-        values='VALOR',
+        names='categoria',
+        values='valor',
         title='Vendas por Categoria'
     )
 
