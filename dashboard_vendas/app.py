@@ -20,6 +20,7 @@ arquivo = st.file_uploader(
 
 if arquivo:
     df = pd.read_excel(arquivo)
+    st.write('Colunas do arquivo:', df.columns.tolist())
 
     # Tratamento básico
     df['data'] = pd.to_datetime(df['data'])
