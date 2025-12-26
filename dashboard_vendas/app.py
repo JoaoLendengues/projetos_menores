@@ -26,8 +26,8 @@ if arquivo:
     df['data'] = pd.to_datetime(df['data'])
 
     # KPIs
-    total_vendas = df['VALOR'].sum()
-    total_itens = df['QUANTIDADE'].sum()
+    total_vendas = df['valor'].sum()
+    total_itens = df['quantidade'].sum()
     ticket_medio = total_vendas / total_itens
 
     col1, col2, col3, = st.columns(3)
